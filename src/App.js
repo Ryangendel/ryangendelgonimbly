@@ -67,6 +67,16 @@ class App extends Component {
         });
   };
 
+  resetFun = () => {
+     this.setState({
+      search: "",
+      operation: "",
+      results: "",
+      submittable: false,
+      inputProblem: false,
+        });
+  };
+
   render() {
     const resultsIn = this.state.results;
     return (
@@ -79,7 +89,7 @@ class App extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        {this.state.results.result? <Modal solution={this.state.results.result}/> :""}
+        {this.state.results.result? <Modal reset={this.resetFun} solution={this.state.results.result}/> :""}
         {this.state.inputProblem ? <AlertDismissible/> : ""}
       </div>
     );

@@ -5,7 +5,10 @@ import Button from 'react-bootstrap/Button';
 function SolutionModal(props) {
     const [show, setShow] = useState(true);
   
-    const handleClose = () => setShow(false);
+    const handleClose = () => {
+    props.reset()    
+    setShow(false);
+    }
     const handleShow = () => setShow(true);
   
     return (
