@@ -1,10 +1,10 @@
 import React from "react";
-import Modal from "./Modal"
+import Modal from "./Modal";
 
 function Results(props) {
   return (
     <div>
-    <Modal solution={props.results1} /> 
+      <Modal solution={props.results1} />
     </div>
   );
 }

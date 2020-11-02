@@ -26,16 +26,16 @@ function SearchForm(props) {
             placeholder="Enter Expression"
             id="operation"
           />
-          
+
           <Row>
-          <Col md={{ span: 1, offset: 4 }}>
-          <button
-            onClick={props.handleFormSubmit}
-            className="btn btn-primary mt-3"
-          >
-            Submit
-          </button>
-          </Col>
+            <Col md={{ span: 1, offset: 4 }}>
+              <button
+                onClick={props.handleFormSubmit}
+                className="btn btn-primary mt-3"
+              >
+                Submit
+              </button>
+            </Col>
           </Row>
         </div>
       </form>
