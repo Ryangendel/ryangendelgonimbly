@@ -29,7 +29,7 @@ function SearchForm(props) {
             onClick={props.handleFormSubmit}
             className="btn btn-primary mt-3"
           >
-            Search
+            Submit
           </button>
         </div>
       </form>

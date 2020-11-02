@@ -5,8 +5,8 @@ import API from "./utils/API";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import InfoGrid from "./components/InfoGrid";
-import AlertDismissibleExample from "./components/DangerAlert";
-
+import AlertDismissible from "./components/DangerAlert";
+import Modal from "./components/Modal";
 
 class App extends Component {
   state = {
@@ -45,7 +45,7 @@ class App extends Component {
     ) {
       this.setState({
         inputProblem: false,
-        submittable: true
+        submittable: true,
       });
     } else
       this.setState({
@@ -79,14 +79,8 @@ class App extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <div>
-          {resultsIn ? (
-            <MathResults results1={this.state.results.result} />
-          ) : (
-            ""
-          )}
-        </div>
-        {this.state.inputProblem? <AlertDismissibleExample />:""}
+        {this.state.results.result? <Modal solution={this.state.results.result}/> :""}
+        {this.state.inputProblem ? <AlertDismissible/> : ""}
       </div>
     );
   }

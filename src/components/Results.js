@@ -1,9 +1,10 @@
 import React from "react";
+import Modal from "./Modal"
 
 function Results(props) {
   return (
     <div>
-    <h1>{props.results1}</h1> 
+    <Modal solution={props.results1} /> 
     </div>
   );
 }
