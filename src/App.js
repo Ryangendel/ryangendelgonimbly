@@ -81,8 +81,7 @@ class App extends Component {
     const resultsIn = this.state.results;
     return (
       <div>
-        <Container>
-          <Jumbotron>
+        <Jumbotron>
             <h1>The Homework Helper</h1>
             <p>
               This app allows you to do anything from numerical calculation to
@@ -94,6 +93,8 @@ class App extends Component {
               field and we will return the derivative of your formula.
             </p>
           </Jumbotron>
+        <Container>
+          
           <Row>
             <Col md={{ span: 8, offset: 2 }}>
               <InfoGrid />
