@@ -7,24 +7,24 @@ function InfoTable() {
     <thead>
       <tr>
         <th>Valid Operations</th>
-        <th>Valid Input</th>
+        <th>Valid Input Examples</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Simplify</td>
+        <td>simplify</td>
         <td>2^2+2(2)</td>
       </tr>
       <tr>
-        <td>Factor</td>
+        <td>factor</td>
         <td>x^2+2</td>
       </tr>
       <tr>
-        <td>Derive</td>
+        <td>derive</td>
         <td>x^2+2x</td>
       </tr>
       <tr>
-        <td>Integrate</td>
+        <td>integrate</td>
         <td>x^2+2</td>
       </tr>
     </tbody>

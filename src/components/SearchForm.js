@@ -1,36 +1,42 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 
 function SearchForm(props) {
   return (
     <div>
       <form>
         <div className="form-group">
-          <label htmlFor="search">Expression:</label>
+          <label className="expression" htmlFor="search"></label>
           <input
             onChange={props.handleInputChange}
             value={props.search}
             name="search"
             type="text"
             className="form-control"
-            placeholder="Enter Expression"
+            placeholder="Enter Operation"
             id="search"
           />
-          <label htmlFor="search">Operation:</label>
+          <label className="search" htmlFor="search"></label>
           <input
             onChange={props.handleInputChange}
             value={props.operation}
             name="operation"
             type="text"
             className="form-control"
-            placeholder="Enter Operation"
+            placeholder="Enter Expression"
             id="operation"
           />
+          
+          <Row>
+          <Col md={{ span: 1, offset: 4 }}>
           <button
             onClick={props.handleFormSubmit}
             className="btn btn-primary mt-3"
           >
             Submit
           </button>
+          </Col>
+          </Row>
         </div>
       </form>
     </div>

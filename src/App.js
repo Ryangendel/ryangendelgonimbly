@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import SearchForm from "./components/SearchForm";
-import MathResults from "./components/Results";
 import API from "./utils/API";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import InfoGrid from "./components/InfoGrid";
 import AlertDismissible from "./components/DangerAlert";
 import Modal from "./components/Modal";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col, Jumbotron } from "react-bootstrap";
 
 class App extends Component {
   state = {
@@ -68,29 +68,52 @@ class App extends Component {
   };
 
   resetFun = () => {
-     this.setState({
+    this.setState({
       search: "",
       operation: "",
       results: "",
       submittable: false,
       inputProblem: false,
-        });
+    });
   };
 
   render() {
     const resultsIn = this.state.results;
     return (
       <div>
-        <h1>hello</h1>
-        <InfoGrid />
-        <SearchForm
-          search={this.state.search}
-          operation={this.state.operation}
-          handleFormSubmit={this.handleFormSubmit}
-          handleInputChange={this.handleInputChange}
-        />
-        {this.state.results.result? <Modal reset={this.resetFun} solution={this.state.results.result}/> :""}
-        {this.state.inputProblem ? <AlertDismissible/> : ""}
+        <Container>
+          <Jumbotron>
+            <h1>The Homework Helper</h1>
+            <p>
+              This app allows you to do anything from numerical calculation to symbolic math parsing.
+              </p>
+              <p>For example: let's find the derivative of x^2.
+                 Type 'derive' to the operation field and the 'x^2' expression into the expression field and we will return the derivative of your formula. 
+              </p>
+          </Jumbotron>
+          <Row>
+            <Col md={{ span: 8, offset: 2 }}>
+              <InfoGrid />
+            </Col>
+          </Row>
+          {this.state.inputProblem ? <AlertDismissible /> : ""}
+          <Row>
+            <Col md={{ span: 4, offset: 4 }}>
+              <SearchForm
+                search={this.state.search}
+                operation={this.state.operation}
+                handleFormSubmit={this.handleFormSubmit}
+                handleInputChange={this.handleInputChange}
+              />
+            </Col>
+          </Row>
+          {this.state.results.result ? (
+            <Modal reset={this.resetFun} solution={this.state.results.result} />
+          ) : (
+            ""
+          )}
+          
+        </Container>
       </div>
     );
   }
