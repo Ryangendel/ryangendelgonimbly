@@ -40,8 +40,8 @@ class App extends Component {
   validData = (search, operation) => {
     const allowedWords = ["simplify", "factor", "derive", "integrate"];
     if (
-      allowedWords.indexOf(search.toLowerCase().replace(/\s/g, '') ) >= 0 &&
-      operation.replace(/\s/g, '').match("^[0-9]|x")
+      allowedWords.indexOf(search.toLowerCase().replace(/\s/g, "")) >= 0 &&
+      operation.replace(/\s/g, "").match("^[0-9]|x")
     ) {
       this.setState({
         inputProblem: false,
@@ -82,19 +82,18 @@ class App extends Component {
     return (
       <div>
         <Jumbotron>
-            <h1>The Homework Helper</h1>
-            <p>
-              This app allows you to do anything from numerical calculation to
-              symbolic math parsing.
-            </p>
-            <p>
-              For example: let's find the derivative of x^2. Type 'derive' to
-              the operation field and the 'x^2' expression into the expression
-              field and we will return the derivative of your formula.
-            </p>
-          </Jumbotron>
+          <h1>The Homework Helper</h1>
+          <p>
+            This app allows you to do anything from numerical calculation to
+            symbolic math parsing.
+          </p>
+          <p>
+            For example: let's find the derivative of x^2. Type 'derive' to the
+            operation field and the 'x^2' expression into the expression field
+            and we will return the derivative of your formula.
+          </p>
+        </Jumbotron>
         <Container>
-          
           <Row>
             <Col md={{ span: 8, offset: 2 }}>
               <InfoGrid />
