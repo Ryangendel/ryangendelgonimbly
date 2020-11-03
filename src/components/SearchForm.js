@@ -31,7 +31,7 @@ function SearchForm(props) {
             <Col md={{ span: 1, offset: 4 }}>
               <button
                 onClick={props.handleFormSubmit}
-                className="btn btn-primary mt-3"
+                className="btn btn-primary mt-3 submitButton"
               >
                 Submit
               </button>

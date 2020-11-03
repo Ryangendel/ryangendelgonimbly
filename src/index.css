@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://scitechdaily.com/images/COVID-19-Math-Model-Concept.jpg")
+  background-image: url("https://scitechdaily.com/images/COVID-19-Math-Model-Concept.jpg");
 }
 
 code {
@@ -16,3 +16,20 @@ code {
 .search{
   margin-top:20px
 }
+
+.table1{
+  box-shadow: 5px 10px 15px black;
+}
+
+.jumbotron{
+  padding:0;
+  border-bottom: 4px solid black;
+  border-right: 4px solid black;
+  border-left: 4px solid black;
+  max-height: 250px;
+}
+
+.form-group{
+  margin-top:20px;
+}
+
