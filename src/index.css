@@ -27,6 +27,8 @@ code {
   border-right: 4px solid black;
   border-left: 4px solid black;
   max-height: 250px;
+  background-image: url("https://utemplates.net/wp-content/uploads/2017/07/White-Seamless-Paper-Texture-Background.jpg");
+  background-repeat:repeat;
 }
 
 .form-group{
