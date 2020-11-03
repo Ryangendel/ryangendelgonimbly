@@ -83,8 +83,8 @@ class App extends Component {
       <div>
         
         <Container>
-        <Jumbotron style={{padding: "2% 2% .5% 2%"}} className="jtron">
-          <h1>The Homework Helper</h1>
+        <Jumbotron style={{padding: "2% 2% .5% 2%"}}>
+          <h1 className="jtron">The Homework Helper</h1>
           <p>
             This app allows you to do anything from numerical calculation to
             symbolic math parsing.
