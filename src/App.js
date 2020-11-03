@@ -78,7 +78,6 @@ class App extends Component {
   };
 
   render() {
-    const resultsIn = this.state.results;
     return (
       <div>
         

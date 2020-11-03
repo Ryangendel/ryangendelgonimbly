@@ -9,8 +9,7 @@ function SolutionModal(props) {
     props.reset();
     setShow(false);
   };
-  const handleShow = () => setShow(true);
-
+ 
   return (
     <>
       <Modal show={show} onHide={handleClose}>
