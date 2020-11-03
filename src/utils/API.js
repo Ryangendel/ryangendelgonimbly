@@ -4,6 +4,6 @@ const BASEURL = "https://newton.now.sh/api/v2/";
 
 export default {
   search: function(search, operation) {
-    return axios.get(BASEURL + search.replace(/\s/g, '') + "/" + operation.toLowerCase().replace(/\s/g, ''));
+    return axios.get(BASEURL + search + "/" + operation);
   }
 };

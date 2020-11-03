@@ -41,7 +41,7 @@ class App extends Component {
     const allowedWords = ["simplify", "factor", "derive", "integrate"];
     if (
       allowedWords.indexOf(search.toLowerCase().replace(/\s/g, "")) >= 0 &&
-      operation.replace(/\s/g, "").match("^[0-9]|x")
+      operation.match("^[0-9]|x")
     ) {
       this.setState({
         inputProblem: false,
@@ -60,7 +60,7 @@ class App extends Component {
     event.preventDefault();
     await this.validData(this.state.search, this.state.operation);
     this.state.submittable
-      ? this.searchNewton(this.state.search, this.state.operation)
+      ? this.searchNewton(this.state.search.replace(/\s/g, "").toLowerCase(), this.state.operation.replace(/\s/g, "").toLowerCase())
       : this.setState({
           search: "",
           operation: "",
