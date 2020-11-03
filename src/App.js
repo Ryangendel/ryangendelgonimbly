@@ -41,7 +41,7 @@ class App extends Component {
     const allowedWords = ["simplify", "factor", "derive", "integrate"];
     if (
       allowedWords.indexOf(search.toLowerCase().replace(/\s/g, "")) >= 0 &&
-      operation.match("^[0-9]|x")
+      operation.match("^[0-9]|x|X")
     ) {
       this.setState({
         inputProblem: false,
