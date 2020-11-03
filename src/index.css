@@ -29,6 +29,7 @@ code {
   max-height: 250px;
   background-image: url("https://utemplates.net/wp-content/uploads/2017/07/White-Seamless-Paper-Texture-Background.jpg");
   background-repeat:repeat;
+  overflow:scroll;
 }
 
 .form-group{
